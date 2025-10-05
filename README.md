@@ -16,9 +16,24 @@ A **Streamlit-based PDF chatbot** that uses **EmbedChain** and **OpenAI embeddin
 
 ## Setup
 
-1. **Clone the repository**
+1. **Clone the repository and set up environment**
 ```bash
+# Clone the repository
 git clone https://github.com/Ami-Khokhar/Chat_with_x.git
 cd Chat_with_x
+
+# Create a virtual environment (optional but recommended)
+python -m venv venv
+# Linux/macOS
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
-OPENAI_API_KEY=your_openai_api_key_here
+# If requirements.txt doesn’t exist:
+pip install streamlit embedchain python-dotenv
+
+# Set your OpenAI API key
+# Create a .env file in the project root:
+echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
